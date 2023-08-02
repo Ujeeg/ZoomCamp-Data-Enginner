@@ -1,67 +1,94 @@
-import argparse
-import pandas as pd
+#!/usr/bin/env python
+# coding: utf-8
+
 import os
+import argparse
+import requests
 import gzip
+import shutil
+
 from time import time
+
+import pandas as pd
 from sqlalchemy import create_engine
 
-
 def main(params):
-    User = params.User
-    Password = params.Password
-    Host = params.Host
-    Port = params.Port
-    Database = params.Database
-    Table_Name = params.Table_Name
+    user = params.user
+    password = params.password
+    host = params.host 
+    port = params.port 
+    db = params.db
+    table_name = params.table_name
     url = params.url
-    csv_name = 'output.csv'
+    
+    csv_name = 'output.csv.gz'
+    csv_decompressed_name = 'hasil.csv'
 
-    os.system(f"wget -o {csv_name} {url}")
+    # Download the file using requests
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Check for any download errors
+        with open(csv_name, 'wb') as f:
+            f.write(response.content)
+        print("File downloaded successfully.")
+    except requests.exceptions.RequestException as e:
+        print(f"Error: Failed to download the file {url}.")
+        return
 
-    # Gunzip the file
-    decompressed_file = 'output_decompressed.csv'
-    with gzip.open(csv_name, 'rb') as file_in:
-        with open(decompressed_file, 'wb') as file_out:
-            file_out.write(file_in.read())
+    # Decompress the file
+    with gzip.open(csv_name, 'rb') as f_in:
+        with open(csv_decompressed_name, 'wb') as f_out:
+            shutil.copyfileobj(f_in, f_out)
 
-    engine = create_engine(f'postgresql://{User}:{Password}@{Host}:{Port}/{Database}')
+    # Remove the compressed file
+    os.remove(csv_name)
 
-    df_iter = pd.read_csv(decompressed_file, iterator=True, chunksize=100000)
+    engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
+
+    df_iter = pd.read_csv(csv_decompressed_name, iterator=True, chunksize=100000)
 
     df = next(df_iter)
 
     df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
     df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
-    df.head(n=0).to_sql(name=Table_Name, con=engine, if_exists='append')
+    df.head(n=0).to_sql(name=table_name, con=engine, if_exists='replace')
 
-    df.to_sql(name=Table_Name, con=engine, if_exists='append')
+    df.to_sql(name=table_name, con=engine, if_exists='append')
 
-    while True:
-        t_start = time()
+    while True: 
 
-        df = next(df_iter)
+        try:
+            t_start = time()
+            
+            df = next(df_iter)
 
-        df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-        df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+            df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+            df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
-        df.to_sql(name=Table_Name, con=engine, if_exists='append')
+            df.to_sql(name=table_name, con=engine, if_exists='append')
 
-        t_end = time()
+            t_end = time()
 
-        print('Inserting another chunk..., took %.3f seconds' % (t_end - t_start))
+            print('inserted another chunk, took %.3f second' % (t_end - t_start))
 
+        except StopIteration:
+            print("Finished ingesting data into the postgres database")
+            break
+
+    # Remove the decompressed file
+    os.remove(csv_decompressed_name)
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Ingest CSV data to PostgreSQL')
+    parser = argparse.ArgumentParser(description='Ingest CSV data to Postgres')
 
-    parser.add_argument('--User', help='User name for PostgreSQL')
-    parser.add_argument('--Password', help='Password for PostgreSQL')
-    parser.add_argument('--Host', help='Host for PostgreSQL')
-    parser.add_argument('--Port', help='Port for PostgreSQL')
-    parser.add_argument('--Database', help='Database for PostgreSQL')
-    parser.add_argument('--Table_Name', help='Name of the table where the data will be written')
-    parser.add_argument('--url', help='URL of the CSV file')
+    parser.add_argument('--user', required=True, help='user name for postgres')
+    parser.add_argument('--password', required=True, help='password for postgres')
+    parser.add_argument('--host', required=True, help='host for postgres')
+    parser.add_argument('--port', required=True, help='port for postgres')
+    parser.add_argument('--db', required=True, help='database name for postgres')
+    parser.add_argument('--table_name', required=True, help='name of the table where we will write the results to')
+    parser.add_argument('--url', required=True, help='url of the csv file')
 
     args = parser.parse_args()
 

@@ -40,31 +40,43 @@ docker run -it \
   --name pgadmin \
   dpage/pgadmin4
 
-URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+URL='https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz'
 
 python ingest_data.py \
---User=root \
---Password=root \
---Host=localhost \
---Port=5432 \
---Database=ny_taxi \
---Table_Name=yellow_taxi \
+--user=root \
+--password=root \
+--host=localhost \
+--port=5432 \
+--db=ny_taxi \
+--table_name=yellow_taxi \
 --url=%{URL}
+
+python ingest_data.py \
+--user=root \
+--password=root \
+--host=localhost \
+--port=5432 \
+--db=ny_taxi \
+--table_name=yellow_taxi \
+--url='https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz'
+
  
 #Create Image
 docker build -t taxi_ingest:v001 .
 
 #Run Imaage
-docker run -it taxi_ingest:v001 . \
+URL="https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/yellow_tripdata_2021-01.csv.gz"
+
+docker run -it \
   --network=pg-network \
   taxi_ingest:v001 \
-    --User=root \
-    --Password=root \
-    --Host=localhost \
-    --Port=5432 \
-    --Database=ny_taxi \
-    --Table_Name=yellow_taxi \
-    --url=%{URL}
+    --user=root \
+    --password=root \
+    --host=pg-database-1 \
+    --port=5432 \
+    --db=ny_taxi \
+    --table_name=yellow_taxi \
+    --url=${URL}
 
 
 docker-compose up
@@ -74,6 +86,6 @@ Terraform
 1.5.0
 python ingest_data.py \
 
-export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-a54fbaf36ba7.json
+ export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-a54fbaf36ba7.json
 
 export GOOGLE_APPLICATION_CREDENTIALS=/C:/Users/fajar/Downloads/zoomcampproject-394006-efdc7f3eaa8d.json
