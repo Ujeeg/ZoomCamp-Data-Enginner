@@ -36,16 +36,5 @@
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/Run%20Image%20Ingest_data.png)
 ##### After upload data to local server
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/PGADMIN%20AFTER%20Ingest_data.png)
-### 4. Make Docker-compose
 
-#### A. Setting up GCP
-#### B. Enable API
-#### C. Enable IM ADMIN
-#### D. Make Admin and google Credetial
-#### E. Setting Terraform
-#### F. 
-### 5. Make and Setting Up Cloud VM
-#### A. Setting up Compute Engine
-#### B. Installing environmernt (VS code, Docker, Terraform, GCP) 
-#### C. Connect Cloud CM with GC to local Computer
-#### D. 
+#### Setting up Terraform
