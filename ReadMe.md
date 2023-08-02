@@ -37,4 +37,7 @@
 ##### After upload data to local server
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/PGADMIN%20AFTER%20Ingest_data.png)
 
-#### Setting up Terraform
+### 4. Setting up GCP
+#### A. Installing Google Cloud SDK ![Link](https://cloud.google.com/sdk/docs/downloads-interactive)
+#### B. Intalling Python 3 (e.g. installed with Anaconda) ![Link](https://www.anaconda.com/download)
+#### C.Docker with docker-compose
