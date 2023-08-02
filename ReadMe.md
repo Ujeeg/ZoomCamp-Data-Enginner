@@ -26,13 +26,18 @@
 ![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cc3b37ab51db7318bb120bc80eb7b1c22ca65a40/Week_1_setup/Make%20Image%20to%20Ingest%20data.yml)
 #### A. Create Dockerfile
 ![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cc3b37ab51db7318bb120bc80eb7b1c22ca65a40/Week_1_setup/Dockerfile)
-![]()
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/Make%20Docker%20file.png)
 #### B. Create Ingest_data.py
 ![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cc3b37ab51db7318bb120bc80eb7b1c22ca65a40/Week_1_setup/ingest_data.py)
-![]()
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/Make%20ingest_data.png)
 #### C. Create Image Ingest_data.V001
-![]()
-### 4. Connect Locally Database to GCP
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/make%20Image%20Ingest%20data.png)
+#### D. Run Image ingest_data.V001
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/Run%20Image%20Ingest_data.png)
+##### After upload data to local server
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/PGADMIN%20AFTER%20Ingest_data.png)
+### 4. Make Docker-compose
+
 #### A. Setting up GCP
 #### B. Enable API
 #### C. Enable IM ADMIN
