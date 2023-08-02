@@ -50,16 +50,30 @@ python ingest_data.py \
 --Database=ny_taxi \
 --Table_Name=yellow_taxi \
 --url=%{URL}
-
+ 
+#Create Image
 docker build -t taxi_ingest:v001 .
 
-docker rin taxi_ingest
-python ingest_data.py \
---User=root \
---Password=root \
---Host=localhost \
---Port=5432 \
---Database=ny_taxi \
---Table_Name=yellow_taxi_trips \
---url=%{URL}
+#Run Imaage
+docker run -it taxi_ingest:v001 . \
+  --network=pg-network \
+  taxi_ingest:v001 \
+    --User=root \
+    --Password=root \
+    --Host=localhost \
+    --Port=5432 \
+    --Database=ny_taxi \
+    --Table_Name=yellow_taxi \
+    --url=%{URL}
 
+
+docker-compose up
+docker-compose down
+Terraform 
+
+1.5.0
+python ingest_data.py \
+
+export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-a54fbaf36ba7.json
+
+export GOOGLE_APPLICATION_CREDENTIALS=/C:/Users/fajar/Downloads/zoomcampproject-394006-efdc7f3eaa8d.json
