@@ -109,12 +109,16 @@ Result
 * Test SSH connection
      ssh -i ~/.ssh/<ssh-name> username@ipexternal
   ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/558318a7f3f6ed1406dbc090b4a4a2b261915a13/Picture/VM%20Setting/run%20VM.png)
+  
    * Result when VM running correctly
      ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/558318a7f3f6ed1406dbc090b4a4a2b261915a13/Picture/VM%20Setting/VM%20running.png)
+     
 * Create ssh config
   You can run VM with ssh de-zoomcamp
      ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/558318a7f3f6ed1406dbc090b4a4a2b261915a13/Picture/VM%20Setting/Config%20ssh.png)
+  
    *testing
      ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/558318a7f3f6ed1406dbc090b4a4a2b261915a13/Picture/VM%20Setting/resut%20config.png)
+  
 
 ## After this you can install environment in VM and reapeat step 1 until 5, so you can run docker and made image or pgserver in VM
