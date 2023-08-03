@@ -48,21 +48,19 @@ Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + B
 
 ### 4. environment variable to point to your downloaded GCP keys: 
 
-export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
+        export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
+        export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-2ddf7aea62ff.json /#Example
 
-export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-2ddf7aea62ff.json
-
-gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
-
+        gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+![](https://console.cloud.google.com/apis/library/iam.googleapis.com)
+    Refresh token/session, and verify authentication
+        gcloud auth application-default login
 
 Terraform 
 source https://www.terraform.io/
-# Refresh token/session, and verify authentication
-gcloud auth application-default login
-
-    Enable these APIs for your project:
-        https://console.cloud.google.com/apis/library/iam.googleapis.com
-        https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com
+        Enable these APIs for your project:
+        ![IM/ADMIN](https://console.cloud.google.com/apis/library/iam.googleapis.com)
+        ![API](https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com)
 
 #### A. Installing Google Cloud SDK ![Link](https://cloud.google.com/sdk/docs/downloads-interactive)
 #### B. Intalling Python 3 (e.g. installed with Anaconda) ![Link](https://www.anaconda.com/download)
