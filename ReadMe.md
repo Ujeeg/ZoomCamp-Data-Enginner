@@ -1,16 +1,15 @@
 # ZoomCamp-Data-Enginner
 ## Free Course From DataTalksClub 
 ## Week 1: Introduction & Prerequisites
-    Course overview
-    Introduction to GCP
-    Docker and docker-compose
-    Running Postgres locally with Docker
-    Setting up infrastructure on GCP with Terraform
-    Preparing the environment for the course
+    * Course overview
+    * Introduction to GCP
+    * Docker and docker-compose
+    * Running Postgres locally with Docker
+    * Setting up infrastructure on GCP with Terraform
+    * Preparing the environment for the course
 
 ### 1. Seting Network Locally 
-
-![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/main/Week_1_setup/Setting%20Network%20Manually.yml)
+* ![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/main/Week_1_setup/Setting%20Network%20Manually.yml)
 
 #### A. Use Local to open PGADMIN
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/77cd2bad0c70d8a2bcd59366274809c9602a27da/Picture/Setting%20up%20Connection/PG%20ADMIN%20Locally.png)
@@ -93,5 +92,6 @@ Result
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/GCP/data%20bucket.png)
 
 ### 6. Setting up the environment on cloud VM
+##### make
 ### 7. Generating SSH keys
 ### setting up environment (docker, python, vscode)
