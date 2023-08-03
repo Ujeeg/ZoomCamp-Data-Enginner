@@ -92,17 +92,6 @@ Result
 
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/GCP/data%20bucket.png)
 
-Setting up the environment on cloud VM
-Generating SSH keys
-Creating a virtual machine on GCP
-Connecting to the VM with SSH
-Installing Anaconda
-Installing Docker
-Creating SSH config file
-Accessing the remote machine with VS Code and SSH remote
-Installing docker-compose
-Installing pgcli
-Port-forwarding with VS code: connecting to pgAdmin and Jupyter from the local computer
-Installing Terraform
-Using sftp for putting the credentials to the remote machine
-Shutting down and removing the instance
+### 6. Setting up the environment on cloud VM
+### 7. Generating SSH keys
+### setting up environment (docker, python, vscode)
