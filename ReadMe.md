@@ -53,10 +53,11 @@ Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + B
 
 ### 4. environment variable to point to your downloaded GCP keys: 
 
-            export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
-            export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-2ddf7aea62ff.json /#Example
+        export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
 
-            gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+        export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-2ddf7aea62ff.json /#Example
+        
+        gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
 
         Refresh token/session, and verify authentication
             
