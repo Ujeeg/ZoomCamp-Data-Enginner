@@ -62,7 +62,7 @@ Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + B
             
             gcloud auth application-default login
 
-![]([https://console.cloud.google.com/apis/library/iam.googleapis.com](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cb8ba643e87d0bc54cd1e53de7e7dad0c0d241fc/Picture/GCP/CMD%20connect%20google.png))
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cb8ba643e87d0bc54cd1e53de7e7dad0c0d241fc/Picture/GCP/CMD%20connect%20google.png)
     
 Terraform 
 source https://www.terraform.io/
