@@ -43,8 +43,8 @@ Click the Edit principal icon for your service account.
 Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + BigQuery Admin
         ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/29d38e2f0b478eaf3dce77d8e86b4b179fce691d/Picture/GCP/IM%20ADMIN%20SERVICE%20ACCOUNT%201.png) ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/29d38e2f0b478eaf3dce77d8e86b4b179fce691d/Picture/GCP/IM%20ADMIN%20SERVICE%20ACCOUNT%202.png) 
         
-        Result
-        ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/29d38e2f0b478eaf3dce77d8e86b4b179fce691d/Picture/GCP/IM%20ADMIN%20SERVICE%20ACCOUNT%203.png)
+**Result**
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/29d38e2f0b478eaf3dce77d8e86b4b179fce691d/Picture/GCP/IM%20ADMIN%20SERVICE%20ACCOUNT%203.png)
 
 ### 4. Setting up GCP
 #### A. Installing Google Cloud SDK ![Link](https://cloud.google.com/sdk/docs/downloads-interactive)
