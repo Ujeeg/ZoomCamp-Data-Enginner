@@ -36,6 +36,14 @@
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/Run%20Image%20Ingest_data.png)
 ##### After upload data to local server
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/PGADMIN%20AFTER%20Ingest_data.png)
+### 5. Setup for Access Google Console 
+#### 1. IAM Roles for Service account:
+        Go to the IAM section of IAM & Admin https://console.cloud.google.com/iam-admin/iam
+        Click the Edit principal icon for your service account.
+        Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + BigQuery Admin
+        ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/29d38e2f0b478eaf3dce77d8e86b4b179fce691d/Picture/GCP/IM%20ADMIN%20SERVICE%20ACCOUNT%201.png) ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/29d38e2f0b478eaf3dce77d8e86b4b179fce691d/Picture/GCP/IM%20ADMIN%20SERVICE%20ACCOUNT%202.png) 
+        Result
+        ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/29d38e2f0b478eaf3dce77d8e86b4b179fce691d/Picture/GCP/IM%20ADMIN%20SERVICE%20ACCOUNT%203.png)
 
 ### 4. Setting up GCP
 #### A. Installing Google Cloud SDK ![Link](https://cloud.google.com/sdk/docs/downloads-interactive)
