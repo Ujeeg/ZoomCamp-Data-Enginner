@@ -24,11 +24,10 @@
 
 ### 3. Make Image and Upload data to PGADMIN local server
 
-![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cc3b37ab51db7318bb120bc80eb7b1c22ca65a40/Week_1_setup/Make%20Image%20to%20Ingest%20data.yml)
+* ![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cc3b37ab51db7318bb120bc80eb7b1c22ca65a40/Week_1_setup/Make%20Image%20to%20Ingest%20data.yml)
 
 #### A. Create Dockerfile
-![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cc3b37ab51db7318bb120bc80eb7b1c22ca65a40/Week_1_setup/Dockerfile)
-
+* ![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cc3b37ab51db7318bb120bc80eb7b1c22ca65a40/Week_1_setup/Dockerfile)
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/e0d128a7fea15be3255d421af0fa1f24a665a44e/Picture/Make%20imange%20to%20ingest_data%20to%20server/Make%20Docker%20file.png)
 #### B. Create Ingest_data.py
 ![Source](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cc3b37ab51db7318bb120bc80eb7b1c22ca65a40/Week_1_setup/ingest_data.py)
@@ -68,7 +67,7 @@ Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + B
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/GCP/connected%20allow.png)
 
 ### 5. Installing and setting up Terraform 
-source https://www.terraform.io/
+* ![source](https://www.terraform.io/)
 
 Use this in folder terraform for setting up terrafom
        
@@ -92,6 +91,13 @@ Result
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/GCP/data%20bucket.png)
 
 ### 6. Setting up the environment on cloud VM
-##### make
 ### 7. Generating SSH keys
+* Create folder .ssh in HOME directory
+   mkdir .ssh
+* Create SSH Key
+  ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048
+  * Example
+    ssh-keygen -t rsa -f ~/.ssh/GCP -C ujeeg -b 2048
+![]()
+
 ### setting up environment (docker, python, vscode)
