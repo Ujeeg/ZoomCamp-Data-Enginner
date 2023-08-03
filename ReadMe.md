@@ -128,4 +128,32 @@ Result
      ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/558318a7f3f6ed1406dbc090b4a4a2b261915a13/Picture/VM%20Setting/resut%20config.png)
   
 
-## After this you can install environment in VM and reapeat step 1 until 5, so you can run docker and made image or pgserver in VM
+### After this you can install environment in VM and reapeat step 1 until 5, so you can run docker and made image or pgserver in VM
+
+
+## WEEK 2 AIRFLOW (ONGOING)
+
+### 1. Prepare for respitory project 
+      * Create GC folder
+         cd ~ && mkdir -p ~/.google/credentials/
+         mv <path/to/your/service-account-authkeys>.json ~/.google/credentials/google_credentials.json
+      * Create evironment for airflow in respitory project
+         mkdir -p ./dags ./logs ./plugins
+         echo -e "AIRFLOW_UID=$(id -u)" > .env
+      * Setting env file to 
+         AIRFLOW_UID=50000
+      * download official docker-compose.yml file
+         curl -LfO 'https://airflow.apache.org/docs/apache-airflow/stable/docker-compose.yaml'
+      * create Dockerfile and setting up Dockerfile
+### 2. Build Image Aiflow and Run Airflow
+      * create image
+         docker build .
+      * Initialize the Airflow scheduler, DB, and other config
+         docker-compose up airflow-init
+      * Run Airflow image
+         docker compose up
+      * Login with local 
+         Default Account (airflow/airflo)
+         you can see there have schedule and database example
+      * Shutdown image
+         docker compose down
