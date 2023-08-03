@@ -51,10 +51,11 @@ Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + B
             export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
             export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-2ddf7aea62ff.json /#Example
 
-                gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+            gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
 
         Refresh token/session, and verify authentication
-                    gcloud auth application-default login
+            
+            gcloud auth application-default login
 
 ![]([https://console.cloud.google.com/apis/library/iam.googleapis.com](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cb8ba643e87d0bc54cd1e53de7e7dad0c0d241fc/Picture/GCP/CMD%20connect%20google.png))
     
