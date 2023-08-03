@@ -48,14 +48,16 @@ Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + B
 
 ### 4. environment variable to point to your downloaded GCP keys: 
 
-        export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
-        export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-2ddf7aea62ff.json /#Example
+            export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
+            export GOOGLE_APPLICATION_CREDENTIALS=/c/Users/fajar/Downloads/snappy-byte-394006-2ddf7aea62ff.json /#Example
 
-        gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
-![](https://console.cloud.google.com/apis/library/iam.googleapis.com)
-    Refresh token/session, and verify authentication
-        gcloud auth application-default login
+                gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
 
+        Refresh token/session, and verify authentication
+                    gcloud auth application-default login
+
+![]([https://console.cloud.google.com/apis/library/iam.googleapis.com](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cb8ba643e87d0bc54cd1e53de7e7dad0c0d241fc/Picture/GCP/CMD%20connect%20google.png))
+    
 Terraform 
 source https://www.terraform.io/
         Enable these APIs for your project:
