@@ -63,13 +63,45 @@ Add these roles in addition to Viewer : Storage Admin + Storage Object Admin + B
             gcloud auth application-default login
 
 ![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/cb8ba643e87d0bc54cd1e53de7e7dad0c0d241fc/Picture/GCP/CMD%20connect%20google.png)
-    
-Terraform 
-source https://www.terraform.io/
-        Enable these APIs for your project:
-        ![IM/ADMIN](https://console.cloud.google.com/apis/library/iam.googleapis.com)
-        ![API](https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com)
 
-#### A. Installing Google Cloud SDK ![Link](https://cloud.google.com/sdk/docs/downloads-interactive)
-#### B. Intalling Python 3 (e.g. installed with Anaconda) ![Link](https://www.anaconda.com/download)
-#### C.Docker with docker-compose
+        Result
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/GCP/connected%20allow.png)
+
+### 5. Installing and setting up Terraform 
+source https://www.terraform.io/
+
+Use this in folder terraform for setting up terrafom
+       
+        terraform init
+
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/Setting%20up%20terraform/Terraform%20init.png)
+
+Use this for prepare the bucket
+        
+        terraform plan
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/GCP/terraform%20apply.png)
+
+Use this to push bucket to gcp
+
+        terraform apply
+
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/GCP/terraform%20plant%20apply.png)
+
+Result
+
+![](https://github.com/Ujeeg/ZoomCamp-Data-Enginner/blob/13f4ad55962ead6fe906d6bdb566a851f3e169d5/Picture/GCP/data%20bucket.png)
+
+Setting up the environment on cloud VM
+Generating SSH keys
+Creating a virtual machine on GCP
+Connecting to the VM with SSH
+Installing Anaconda
+Installing Docker
+Creating SSH config file
+Accessing the remote machine with VS Code and SSH remote
+Installing docker-compose
+Installing pgcli
+Port-forwarding with VS code: connecting to pgAdmin and Jupyter from the local computer
+Installing Terraform
+Using sftp for putting the credentials to the remote machine
+Shutting down and removing the instance
